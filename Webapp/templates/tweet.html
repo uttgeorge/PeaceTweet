@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Custom CSS and javascript -->
+<link href="../static/css/tweet_style.css" rel='stylesheet' type='text/css'/>
+<script src="../static/js/tweet.js"  type='text/javascript'></script>
+
+<!-- Tweet -->
+<div class='row' id='main-row'>
+	<div class="left-part">
+<!--	tweet box-->
+		<div class="tweet-box">
+			<div class='col-sm-10'>
+				<!-- Tweet submission form and buttons -->
+<!--				<form method='get'>-->
+<!--					<div class='form-box'>-->
+<!--						<textarea placeholder="Enter tweet here:..." id="tweet-box" class="tweet-ana-box" rows="7" cols="80"></textarea>-->
+<!--					</div>-->
+<!--					<input type="button" value="SUBMIT" onclick="getText()" id='submit' class='btn btn-default'/>-->
+<!--				</form>-->
+				<form method='get'>
+					<div class='form-box'>
+						<input type='text' name='tweet' placeholder='Enter here:...' maxlength='140' class='form-control'/>
+						<div class='button-group'>
+							<button id='submit' class='btn btn-default'>SUBMIT</button>
+							<button id='clear' class='btn btn-default'>CLEAR</button>
+						</div>
+					</div>
+				</form>
+				<!-- Predictions are appended here -->
+<!--				<progress id="loading" class="loading" max="100" value="70"></progress>-->
+				<div class='results'></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="right-part">
+		<div class="time-line">
+
+		</div>
+<!--		<div class="">-->
+
+<!--		</div>-->
+	</div>
+
+</div>
+	
+{% endblock %}
