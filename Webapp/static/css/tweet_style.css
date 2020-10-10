@@ -2,6 +2,7 @@
 	height: 75%;
 	max-height: 800px;
 	overflow-y: auto;
+
 }
 
 .col-sm-10 {
@@ -37,6 +38,10 @@
 }
 
 .left-part{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
 	width: 50%;
 }
 .tweet-box{
@@ -77,6 +82,24 @@ form {
 }
 
 .right-part{
+	/*border: 1px black dashed;*/
+	position: absolute;
+	top: 0;
+	left: 50%;
 	width: 50%;
 	height: 100%;
+}
+
+.emotion-table{
+	position: absolute;
+	left: 10%;
+	float: right;
+}
+
+.bar-title{
+	display: inline;
+	 float: left;
+}
+.bar{
+	 float: right;
 }

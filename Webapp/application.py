@@ -9,6 +9,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+
 ### ABOUT ###
 @app.route('/about/', methods=['GET', 'POST'])
 def about():
@@ -18,11 +19,11 @@ def about():
 ## TWEET ###
 @app.route('/tweet/', methods=['GET', 'POST'])
 def tweet():
-    return render_template('tweet.html')
+    return render_template('emotion.html')
 
 
 @app.route('/tweet/predict/', methods=['GET', 'POST'])
-def predict():
+def emotion_predict():
     """
 	Takes input from the TweetRater form box and returns a prediction JSON consisting of:
 	 	1) a string stating the predicted classification rating and the model's confidence
@@ -31,8 +32,10 @@ def predict():
 	"""
 
     tweet = request.args.get('tweet')
-    prediction, rating = sentence_prediction(tweet)
-    return jsonify(prediction=prediction, rating=rating)
+    prediction, probabilities = sentence_prediction(tweet)
+    print(prediction)
+    print(probabilities)
+    return jsonify(prediction=prediction, probabilities=probabilities)
 
 
 if __name__ == '__main__':

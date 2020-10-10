@@ -25,3 +25,4 @@ $(document).ready(function() {
 
 	$('#footer').hide().fadeIn(6000);
 });
+
